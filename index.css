@@ -1,0 +1,159 @@
+#Limpiar
+{
+    /*width: 700px;
+    height: 20px;*/
+
+    padding-top: 2px;
+    padding-right: 50px;
+    padding-bottom: 2px;
+    padding-left: 50px;
+
+    background-color: lightgray;
+
+    margin-top: 10px;
+    margin-right: 400px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+
+    
+}
+
+#tipo_vehiculo
+{
+   /* width: 700px;
+    height: 20px;*/
+
+    padding-top: 2px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+
+    background-color: lightgray;
+
+    margin-top: 10px;
+    margin-right: 400px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+    
+    position: relative          /*deja ubicar elementos */
+}
+
+    #VehiculoBoton
+    {
+        position: absolute;    /*deja ubicar elementos*/
+        right: 300px; /* Alineación desde la parte derecha */
+    }
+
+
+#Marcas
+{
+    /*width: 700px;
+    height: 20px;*/
+
+    padding: 50px;
+
+    background-color: lightgray;
+
+    margin-top: 10px;
+    margin-right: 400px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+    position: relative;
+}
+
+    #Marca
+    {
+        width: 170px;
+    }
+
+    #MarcaBoton
+    {
+        position: absolute;
+        right: 300px; /* Alineación desde la parte derecha */
+    }
+
+
+#Modelos
+{
+    /*width: 700px;
+    height: 20px;*/
+
+    padding: 50px;
+
+    background-color: lightgray;
+
+    margin-top: 10px;
+    margin-right: 400px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+    position: relative;
+}
+    #Modelo
+    {
+        width: 170px;
+    }
+
+    #ModeloBoton
+    {
+        position: absolute;
+        right: 300px; /* Alineación desde la parte derecha */
+    }
+
+#años
+{
+    /*width: 700px;
+    height: 20px;*/
+
+    padding: 50px;
+
+    background-color: lightgray;
+
+    margin-top: 10px;
+    margin-right: 400px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+    position: relative;
+}
+
+    #Año
+    {
+        width: 170px;
+    }
+
+    #AñoBoton
+    {
+        position: absolute;
+        right: 300px; /* Alineación desde la parte derecha */
+    }
+
+
+#Final
+{
+   /* width: 700px;
+    height: 300px;*/
+
+    padding: 50px; 
+
+    margin-top: 10px;
+    margin-right: 400px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+
+    background-color: lightgray;
+
+    border: 5px solid #333;                                               /* Tamaño borde del Div*/  
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    position: relative;
+}
+    #ConverBoton
+    {
+        width: 200px;
+        height: 40px;
+
+        position: absolute; /* Establecer posición absoluta en el botón hijo */
+        bottom: 200px; /* Alineación desde la parte inferior */
+        right: 150px; /* Alineación desde la parte derecha */
+    }
