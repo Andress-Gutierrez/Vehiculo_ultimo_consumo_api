@@ -144,7 +144,7 @@
     border: 5px solid #333;                                               /* Tamaño borde del Div*/  
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
 
     position: relative;
 }
