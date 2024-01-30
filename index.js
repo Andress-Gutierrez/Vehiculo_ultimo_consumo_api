@@ -35,6 +35,7 @@ class Lector_api
         this.precio_reales="";                                                                                     //precio_vehiculo_reales
         this.sigla_combu="";                                                                                       //guarda_sigla_combustible
         this.año="";                                                                                               //guarda_año
+        this.porcent="";                                                                                           //guarda_porcentajes_string
 
                      
         this.Vehiculos.selectedIndex = 0;
@@ -159,20 +160,23 @@ class Lector_api
                     {
                         if(this.sigla_combu == "G")
                         {
-                            this.impuesto.innerHTML='IMPUESTO:&nbsp;&nbsp;&nbsp;&nbsp; 5%';
+                            this.porcent="IMPUESTO:&nbsp;&nbsp;&nbsp;&nbsp; 5%";
+                            this.impuesto.innerHTML=this.porcent;
                             this.sigla_combu=0.05;
                             console.log(this.sigla_combu);
                         }
                         else
                         {
-                            this.impuesto.innerHTML='IMPUESTO:&nbsp;&nbsp;&nbsp;&nbsp; 2,5%';
+                            this.porcent="IMPUESTO:&nbsp;&nbsp;&nbsp;&nbsp; 2.5%";
+                            this.impuesto.innerHTML=this.porcent;
                             this.sigla_combu=0.025;
                             console.log(this.sigla_combu);
                         }
                     }
                     else
                     {
-                        this.impuesto.innerHTML='IMPUESTO:&nbsp;&nbsp;&nbsp;&nbsp; 1%';
+                        this.porcent="IMPUESTO:&nbsp;&nbsp;&nbsp;&nbsp; 1%";
+                        this.impuesto.innerHTML=this.porcent;
                         this.sigla_combu=0.01;
                         console.log(this.sigla_combu);
                     }
@@ -202,12 +206,12 @@ class Lector_api
 
                     this.valor_final_pesos.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COP: &nbsp;'+numeroFormateado;
 
-                    console.log(divisa_pesos);
-                    console.log(this.precio_reales);
-                    console.log(conver_pesos);
-                    console.log(valorRecortado);
-                    console.log(numeroFormateado);
-                
+                    const valor_impuesto = conver_pesos * this.sigla_combu;
+                    const valor_impu =Math.floor(valor_impuesto);
+
+                    const valor_impu_final =valor_impu.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+                    this.impuesto.innerHTML=this.porcent+"&nbsp;:&nbsp;&nbsp;"+valor_impu_final;                
                 })
                 .catch(error => {
                     console.error('Error en la solicitud:', error.message);
