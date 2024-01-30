@@ -198,8 +198,11 @@ class Lector_api
                 })
                 .then(Data => {
                     //console.log(Data);
+                    const divisa_real =Data.data.BRL.value;
+                    const precio_dolares = this.precio_reales/divisa_real;
+
                     const divisa_pesos = Data.data.COP.value;                                                                                     //objeto/objeto/value
-                    const conver_pesos = this.precio_reales*divisa_pesos;
+                    const conver_pesos = precio_dolares*divisa_pesos;
 
                     const valorRecortado = Math.floor(conver_pesos);                                                                              //quito_decimal
                     const numeroFormateado = valorRecortado.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 });      //puntos_de_mil
