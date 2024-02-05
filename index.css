@@ -1,6 +1,4 @@
-*{
-     box-sizing: border-box;                                              /* Ajusta tamaños pixel ancho,altura,padding,border en uno solo*/
-}
+
 
 body
 {
@@ -14,7 +12,9 @@ body
     background-color: aqua;
     border: 3px solid black;
     border-radius: 10px;
+    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 6fr;
 }
 
 .contenedor div
