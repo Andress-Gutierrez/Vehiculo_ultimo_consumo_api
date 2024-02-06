@@ -1,10 +1,15 @@
-
+*{
+    box-sizing: border-box;                                              /* Ajusta tamaños pixel ancho,altura,padding,border en uno solo*/
+}
 
 body
 {
+    background-color: burlywood;
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
     padding: 0;
+    display: grid;
+    height: 100vh;
 }
 
 .contenedor
@@ -13,15 +18,21 @@ body
     border: 3px solid black;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 6fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr 6fr;
+    place-content: center;
+    height: 100vh;
+    
 }
 
 .contenedor div
 {
+    /*width: 50vh;*/
     background-color:darkgray;
     border: 2px solid black;
     border-radius: 6px;
-
+    width: auto; /* Ajusta el ancho como desees */
+    height: auto;
+    grid-column: 2; 
 }
 
